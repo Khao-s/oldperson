@@ -1,0 +1,1 @@
+function e(e,t){try{let n=localStorage.getItem(e);if(!n)return null;let{data:r,timestamp:i}=JSON.parse(n);return Date.now()-i>t?null:r}catch{return null}}function t(e,t){try{localStorage.setItem(e,JSON.stringify({data:t,timestamp:Date.now()}))}catch(e){console.error(`Cache write failed:`,e)}}export{t as n,e as t};
